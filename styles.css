@@ -1,0 +1,172 @@
+body {
+    margin: 0;
+    overflow-x: hidden;
+    background: linear-gradient(to top, #1e3c72, #2a5298);
+    height: 100vh;
+}
+
+.sky {
+    position: relative;
+    height: 40%;
+    background: linear-gradient(to top, #87ceeb, #ffffff);
+}
+
+.sun {
+    position: absolute;
+    top: 20px;
+    left: 80%;
+    width: 80px;
+    height: 80px;
+    background: yellow;
+    border-radius: 50%;
+    box-shadow: 0 0 30px 10px yellow;
+}
+
+.cloud {
+    position: absolute;
+    width: 100px;
+    height: 60px;
+    background: #fff;
+    border-radius: 50%;
+    opacity: 0.7;
+}
+
+.cloud1 {
+    top: 30px;
+    left: 200px;
+    animation: moveClouds 20s linear infinite;
+}
+
+.cloud2 {
+    top: 60px;
+    left: 400px;
+    animation: moveClouds 25s linear infinite;
+}
+
+@keyframes moveClouds {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(1000px); }
+}
+
+.hot-air-balloon {
+    position: absolute;
+    top: 100px;
+    left: 50%;
+    width: 60px;
+    height: 80px;
+    background: red;
+    border-radius: 50% 50% 60% 60%;
+    animation: floatBalloon 5s ease-in-out infinite;
+}
+
+@keyframes floatBalloon {
+    0% { transform: translateY(0); }
+    50% { transform: translateY(-20px); }
+    100% { transform: translateY(0); }
+}
+
+.city {
+    position: relative;
+    height: 30%;
+    background: #333;
+    display: flex;
+    align-items: flex-end;
+}
+
+.building {
+    width: 100px;
+    height: 200px;
+    margin: 0 10px;
+    background: #555;
+    position: relative;
+}
+
+.party-lights {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 20px;
+    background: repeating-linear-gradient(90deg, red, red 10px, yellow 10px, yellow 20px, green 20px, green 30px, blue 30px, blue 40px);
+    animation: blinkLights 2s infinite;
+}
+
+@keyframes blinkLights {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.5; }
+}
+
+.street {
+    position: relative;
+    height: 20%;
+    background: #222;
+}
+
+.car {
+    position: absolute;
+    bottom: 10px;
+    left: 0;
+    width: 80px;
+    height: 40px;
+    background: blue;
+    border-radius: 10px;
+    animation: moveCar 10s linear infinite;
+}
+
+@keyframes moveCar {
+    0% { left: 0; }
+    100% { left: 100%; }
+}
+
+.park {
+    position: relative;
+    height: 10%;
+    background: #4caf50;
+}
+
+.tree {
+    width: 20px;
+    height: 60px;
+    background: brown;
+    border-radius: 5px;
+    position: absolute;
+    bottom: 0;
+}
+
+.tree::after {
+    content: '';
+    position: absolute;
+    top: -40px;
+    left: -15px;
+    width: 50px;
+    height: 50px;
+    background: green;
+    border-radius: 50%;
+}
+
+.bench {
+    position: absolute;
+    bottom: 0;
+    left: 100px;
+    width: 60px;
+    height: 20px;
+    background: saddlebrown;
+}
+
+.flower {
+    position: absolute;
+    bottom: 0;
+    width: 10px;
+    height: 30px;
+    background: green;
+}
+
+.flower::after {
+    content: '';
+    position: absolute;
+    top: -10px;
+    left: -5px;
+    width: 20px;
+    height: 20px;
+    background: pink;
+    border-radius: 50%;
+}
