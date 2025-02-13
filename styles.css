@@ -1,14 +1,14 @@
 body {
     margin: 0;
     overflow-x: hidden;
-    background: linear-gradient(to top, #1e3c72, #2a5298);
+    background: linear-gradient(to top, #ff6f91, #ff9671);
     height: 100vh;
 }
 
 .sky {
     position: relative;
     height: 40%;
-    background: linear-gradient(to top, #87ceeb, #ffffff);
+    background: linear-gradient(to top, #ffb6c1, #ffffff);
 }
 
 .sun {
@@ -17,9 +17,9 @@ body {
     left: 80%;
     width: 80px;
     height: 80px;
-    background: yellow;
+    background: #ff1493;
     border-radius: 50%;
-    box-shadow: 0 0 30px 10px yellow;
+    box-shadow: 0 0 50px 20px #ff1493;
 }
 
 .cloud {
@@ -48,15 +48,35 @@ body {
     100% { transform: translateX(1000px); }
 }
 
-.hot-air-balloon {
+.heart-balloon {
     position: absolute;
     top: 100px;
     left: 50%;
     width: 60px;
     height: 80px;
     background: red;
-    border-radius: 50% 50% 60% 60%;
+    transform: rotate(0deg);
     animation: floatBalloon 5s ease-in-out infinite;
+}
+
+.heart-balloon::before,
+.heart-balloon::after {
+    content: '';
+    position: absolute;
+    width: 60px;
+    height: 80px;
+    background: red;
+    border-radius: 50%;
+}
+
+.heart-balloon::before {
+    top: -40px;
+    left: 0;
+}
+
+.heart-balloon::after {
+    top: 0;
+    left: -40px;
 }
 
 @keyframes floatBalloon {
@@ -86,7 +106,7 @@ body {
     top: 0;
     width: 100%;
     height: 20px;
-    background: repeating-linear-gradient(90deg, red, red 10px, yellow 10px, yellow 20px, green 20px, green 30px, blue 30px, blue 40px);
+    background: repeating-linear-gradient(90deg, pink, pink 10px, red 10px, red 20px);
     animation: blinkLights 2s infinite;
 }
 
