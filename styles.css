@@ -56,7 +56,7 @@ body {
     height: 80px;
     background: red;
     border-radius: 50% 50% 0 0;
-    transform: rotate(45deg);
+    transform: rotate(0deg);
     animation: floatBalloon 5s ease-in-out infinite;
 }
 
